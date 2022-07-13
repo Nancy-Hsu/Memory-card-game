@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex: 7% 1 1;
+  height: 8vw;
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+}
+
+.card img {
+  max-width: 40%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+  ;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+  background-size: cover;
+}
+.paired {
+  background-color: #dae0e3;
+}
+div#header{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+  margin: 0 auto;
+}
+#header .title {
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
+#header .title img {
+  max-width: 3em;
+}
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+#header .tried {
+  margin-top: 0;
+}
+.wrong {
+  animation: wrongAnimation 0.2s ;
+  animation-iteration-count: 5;
+}
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid yellow;
+  }
+}
+.completed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(0,0,0,0.3);
+}
+.completed .end-notification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 30%;
+  height:80%;
+  background-color: rgba(255,255,255,0.7);
+  margin: auto auto;
+  text-align: center;
+}
+.end-notification p {
+  line-height: 2rem;
+  font-size: 1.3rem;
+}
+.final-score {
+  margin-top: 10%;
+}
+.final-tries {
+  margin-bottom: 10%;
+}
